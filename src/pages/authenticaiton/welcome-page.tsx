@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -12,8 +12,6 @@ import { useSystemContext } from "@/hooks/use-system-context";
 import Logo from "../../../public/logos/zevitech-logo-white.png";
 
 const WelcomePage = () => {
-  const [isClient, setIsClient] = useState(false);
-
   const { role } = useSystemContext();
   const router = useRouter();
 
@@ -29,10 +27,6 @@ const WelcomePage = () => {
   );
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
     if (!role) return;
 
     const timer = setTimeout(() => {
@@ -42,8 +36,6 @@ const WelcomePage = () => {
 
     return () => clearTimeout(timer);
   }, [role, router, roleRoutes]);
-
-  if (!isClient) return null;
 
   return (
     <main className="h-[100svh] w-[100svw] bg-black flex-center">

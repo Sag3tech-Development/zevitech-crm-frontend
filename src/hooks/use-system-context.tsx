@@ -8,7 +8,7 @@ export const useSystemContext = () => {
   const context = useContext(SystemContext);
 
   if (!context) {
-    throw new Error("useCRMContext must be used within a SystemProvider");
+    throw new Error("useSystemContext must be used within a SystemProvider");
   }
   return context;
 };
