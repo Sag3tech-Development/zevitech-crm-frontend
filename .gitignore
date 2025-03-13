@@ -1,0 +1,29 @@
+# DEPENDENCIES
+/node_modules
+
+# TESTING
+/coverage
+
+# NEXT JS
+/.next/
+/out/
+
+# PRODUCTION
+/build
+
+# MISC
+/.DS_Store
+/*.pem
+
+# DEBUG
+/npm-debug.log*
+
+# ENVOIRMENT VARIABLE FILES
+/.env
+
+# VERCEL
+/.vercel
+
+# TYPESCRIPT
+/*.tsbuildinfo
+/next-env.d.ts
