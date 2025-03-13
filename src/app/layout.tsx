@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Poppins, JetBrains_Mono } from "next/font/google";
 
-import { SystemProvider } from "@/context/system-context";
-
 // STYLE SHEETS SOURCE
 import "../styles/globals.css";
 
@@ -94,7 +92,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={`${poppins.variable} ${inter.variable} ${jetbrains.variable} antialiased`}
       >
-        <SystemProvider>{children}</SystemProvider>
+        {children}
       </body>
     </html>
   );
