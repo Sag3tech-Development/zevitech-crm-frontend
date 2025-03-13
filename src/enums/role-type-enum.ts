@@ -1,6 +1,7 @@
 export const RoleTypeEnum = {
   ADMIN: "admin",
   MANAGER: "manager",
-  FRONT_SELLER: "front-seller",
+  SCRAPPER: "scrapper",
   SELLER: "seller",
+  SUPPORT: "support",
 } as const;
