@@ -1,10 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Poppins, JetBrains_Mono } from "next/font/google";
 
-import { CRMProvider } from "@/context/crm-context";
-
-import { Toaster } from "@/components/ui/sonner";
-
 // STYLE SHEETS SOURCE
 import "../styles/globals.css";
 
@@ -96,10 +92,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={`${poppins.variable} ${inter.variable} ${jetbrains.variable} antialiased`}
       >
-        <CRMProvider>
-          {children}
-          <Toaster />
-        </CRMProvider>
+        {children}
       </body>
     </html>
   );
