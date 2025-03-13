@@ -1,4 +1,6 @@
 import { SidebarProvider } from "@/components/ui/sidebar";
+import AppSidebar from "@/components/layouts/app-sidebar";
+import Header from "@/components/layouts/header";
 
 export default function SystemLayout({
   children,
@@ -7,7 +9,11 @@ export default function SystemLayout({
 }) {
   return (
     <SidebarProvider>
-      <main className="w-full overflow-hidden">{children}</main>
+      <AppSidebar />
+      <main className="w-full overflow-hidden">
+        <Header />
+        {children}
+      </main>
     </SidebarProvider>
   );
 }
