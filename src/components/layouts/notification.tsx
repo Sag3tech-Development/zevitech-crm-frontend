@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { PiBellSimpleLight, PiBellSimpleRingingFill } from "react-icons/pi";
 
 const Notification = () => {
-  const [hasNotification, setHasNotification] = useState(false);
+  const [hasNotification] = useState(false);
 
   return (
     <>
