@@ -7,12 +7,12 @@ import { motion } from "framer-motion";
 
 import { RoleTypeEnum } from "@/enums/role-type-enum";
 
-import { useCRMContext } from "@/hooks/use-crm-context";
+import { useSystemContext } from "@/hooks/use-system-context";
 
 import Logo from "../../../public/logos/zevitech-logo-white.png";
 
 const WelcomePage = () => {
-  const { role } = useCRMContext();
+  const { role } = useSystemContext();
   const router = useRouter();
 
   const roleRoutes = useMemo(
