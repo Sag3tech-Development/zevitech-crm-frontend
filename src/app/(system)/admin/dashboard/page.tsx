@@ -1,6 +1,6 @@
 import React from "react";
 
-import DashboardPage from "@/pages/display/admin/dashboard-page";
+import DashboardPage from "@/custom-pages/display/admin/dashboard-page";
 
 const page = () => {
   return <DashboardPage />;

@@ -7,7 +7,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/custom-pages/**/*.{js,ts,jsx,tsx,mdx}",
   ],
 
   theme: {
@@ -31,39 +31,39 @@ export default {
           DEFAULT: "var(--popover)",
           foreground: "var(--popover-foreground)",
         },
-        
-		primary: {
+
+        primary: {
           DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",
           hover: "var(--primary-hover)",
         },
-        
-		secondary: {
+
+        secondary: {
           DEFAULT: "var(--secondary)",
           foreground: "var(--secondary-foreground)",
           hover: "var(--secondary-hover)",
         },
-        
-		muted: {
+
+        muted: {
           DEFAULT: "var(--muted)",
           foreground: "var(--muted-foreground)",
         },
-        
-		accent: {
+
+        accent: {
           DEFAULT: "var(--accent)",
           foreground: "var(--accent-foreground)",
         },
-        
-		destructive: {
+
+        destructive: {
           DEFAULT: "var(--destructive)",
           foreground: "var(--destructive-foreground)",
         },
-        
-		border: "var(--border)",
+
+        border: "var(--border)",
         input: "var(--input)",
         ring: "var(--ring)",
-        
-		sidebar: {
+
+        sidebar: {
           DEFAULT: "var(--sidebar-background)",
           foreground: "var(--sidebar-foreground)",
           primary: "var(--sidebar-primary)",
@@ -124,7 +124,7 @@ export default {
           },
         },
       },
-	  
+
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

@@ -1,6 +1,6 @@
 import React from "react";
 
-import WelcomePage from "@/pages/authentication/welcome-page";
+import WelcomePage from "@/custom-pages/authentication/welcome-page";
 
 const page = () => {
   return <WelcomePage />;
