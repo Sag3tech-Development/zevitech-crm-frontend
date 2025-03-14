@@ -117,11 +117,17 @@ export const SidebarNavigationLinks: Record<
     },
 
     {
-      href: "/support/leads-hub",
       title: "Leads Hub",
       icon: (
         <MdLeaderboard className="md:w-[25px] md:h-[25px] w-[20px] h-[20px]" />
       ),
+      submenu: [
+        { href: "/support/leads/secure-your-mark", title: "Secure Your Mark" },
+        {
+          href: "/support/leads/legal-trademark-office",
+          title: "Legal Trademark Office",
+        },
+      ],
     },
   ],
 } as const;

@@ -19,7 +19,7 @@
 /npm-debug.log*
 
 # ENVOIRMENT VARIABLE FILES
-/.env
+# /.env
 
 # VERCEL
 /.vercel
