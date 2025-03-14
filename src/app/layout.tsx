@@ -3,6 +3,7 @@ import { Inter, Poppins, JetBrains_Mono } from "next/font/google";
 
 // STYLE SHEETS SOURCE
 import "../styles/globals.css";
+import { SystemProvider } from "@/contexts/system-context";
 
 // FONT CONFIGURATIONS
 const poppins = Poppins({
@@ -92,7 +93,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
         className={`${poppins.variable} ${inter.variable} ${jetbrains.variable} antialiased`}
       >
-        {children}
+        <SystemProvider>{children}</SystemProvider>
       </body>
     </html>
   );

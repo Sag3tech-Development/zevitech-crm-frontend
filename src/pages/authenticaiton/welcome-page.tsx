@@ -1,23 +1,41 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
+import { RoleTypeEnum } from "@/enums/role-type-enum";
+
+import { useSystemContext } from "@/hooks/use-system-context";
+
 import Logo from "../../../public/logos/zevitech-logo-white.png";
 
 const WelcomePage = () => {
+  const { role } = useSystemContext();
   const router = useRouter();
 
+  const roleRoutes = useMemo(
+    () => ({
+      [RoleTypeEnum.ADMIN]: "/admin/dashboard",
+      [RoleTypeEnum.MANAGER]: "/manager/dashboard",
+      [RoleTypeEnum.SCRAPPER]: "/scrapper/dashboard",
+      [RoleTypeEnum.SELLER]: "/seller/dashboard",
+      [RoleTypeEnum.SUPPORT]: "/support/dashboard",
+    }),
+    []
+  );
+
   useEffect(() => {
+    if (!role) return;
+
     const timer = setTimeout(() => {
-      const path = "/admin/dashboard";
+      const path = roleRoutes[role];
       if (path) router.push(path);
     }, 4000);
 
     return () => clearTimeout(timer);
-  }, [router]);
+  }, [role, router, roleRoutes]);
 
   return (
     <main className="h-[100svh] w-[100svw] bg-black flex-center">

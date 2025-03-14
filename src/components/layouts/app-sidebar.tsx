@@ -5,9 +5,9 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-import { RoleTypeEnum } from "@/enums/role-type-enum";
-
 import { SidebarNavigationLinks } from "@/constants/sidebar-navigation-links-data";
+
+import { useSystemContext } from "@/hooks/use-system-context";
 
 import { cn } from "@/lib/utils";
 
@@ -28,9 +28,11 @@ import {
 import Logo from "../../../public/logos/zevitech-logo-white.png";
 
 const AppSidebar = () => {
+  const { role } = useSystemContext();
   const pathname = usePathname();
 
-  const navigationLinks = SidebarNavigationLinks[RoleTypeEnum.ADMIN] || [];
+  const navigationLinks =
+    SidebarNavigationLinks[role as keyof typeof SidebarNavigationLinks] || [];
 
   return (
     <Sidebar className="border-none">

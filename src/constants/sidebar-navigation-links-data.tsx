@@ -5,6 +5,7 @@ import { IoStorefront, IoFingerPrint } from "react-icons/io5";
 import { PiPulseBold } from "react-icons/pi";
 import { FaUserFriends, FaEdit } from "react-icons/fa";
 import { HiMiniBanknotes } from "react-icons/hi2";
+import { MdLeaderboard } from "react-icons/md";
 
 export const SidebarNavigationLinks: Record<
   string,
@@ -86,12 +87,40 @@ export const SidebarNavigationLinks: Record<
     },
   ],
 
-  seller: [
+  scrapper: [
     {
-      href: "/front-seller/dashboard",
+      href: "/scrapper/dashboard",
       title: "Dashboard",
       icon: (
         <BiSolidBriefcase className="md:w-[25px] md:h-[25px] w-[20px] h-[20px]" />
+      ),
+    },
+  ],
+
+  seller: [
+    {
+      href: "/seller/dashboard",
+      title: "Dashboard",
+      icon: (
+        <BiSolidBriefcase className="md:w-[25px] md:h-[25px] w-[20px] h-[20px]" />
+      ),
+    },
+  ],
+
+  support: [
+    {
+      href: "/support/dashboard",
+      title: "Dashboard",
+      icon: (
+        <BiSolidBriefcase className="md:w-[25px] md:h-[25px] w-[20px] h-[20px]" />
+      ),
+    },
+
+    {
+      href: "/support/leads-hub",
+      title: "Leads Hub",
+      icon: (
+        <MdLeaderboard className="md:w-[25px] md:h-[25px] w-[20px] h-[20px]" />
       ),
     },
   ],
